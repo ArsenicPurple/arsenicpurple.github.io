@@ -8,8 +8,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52abcd39-3b6d-454e-8181-d17a928b15dd" name="Changes" comment="final ugh">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/gh-pages-delpoy.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/gh-pages-delpoy.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +109,7 @@
       <updated>1744007187297</updated>
       <workItem from="1744007188730" duration="168000" />
       <workItem from="1744007372487" duration="524000" />
-      <workItem from="1744049812185" duration="1182000" />
+      <workItem from="1744049812185" duration="1431000" />
     </task>
     <task id="LOCAL-00001" summary="final ugh">
       <option name="closed" value="true" />

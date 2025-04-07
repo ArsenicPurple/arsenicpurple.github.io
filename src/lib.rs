@@ -60,7 +60,7 @@ impl Default for Question {
         // }
         Self {
             answered: false,
-            question: QuestionType::Video(String::from("https://www.youtube.com/embed/O6VTM0rIrKk?si=IXgERXIdulKG3BZt")),
+            question: QuestionType::Text("Evil?".to_string()),
             answer: "Who is larry?".to_string(),
         }
     }
