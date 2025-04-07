@@ -1,52 +1,41 @@
-use crate::components::counter_btn::Button;
+use std::collections::HashMap;
 use leptos::prelude::*;
+use crate::components::game::Game;
+use crate::components::scoreboard::Scoreboard;
+use crate::GameData;
 
-/// Default Home Page
 #[component]
 pub fn Home() -> impl IntoView {
+    let once = OnceResource::<GameData>::new(async { GameData::default() });
+    let scores: HashMap<String, u32> = HashMap::new();
+    let (read_scores, set_scores) = arc_signal(scores);
+    provide_context(read_scores);
+    provide_context(set_scores);
+
     view! {
-        <ErrorBoundary fallback=|errors| {
-            view! {
-                <h1>"Uh oh! Something went wrong!"</h1>
+        <Suspense
+            fallback=move || view! { <h1>"Loading..."</h1> }
+        >
+        { move || match once.get() {
+            None => view! { <h1>"Loading Game"</h1> }.into_any(),
+            Some(game_data) => {
+                let (read_game_data, set_game_data) = arc_signal(game_data.clone());
+                provide_context(set_game_data);
+                provide_context(read_game_data);
 
-                <p>"Errors: "</p>
-                // Render a list of errors as strings - good for development purposes
-                <ul>
-                    {move || {
-                        errors
-                            .get()
-                            .into_iter()
-                            .map(|(_, e)| view! { <li>{e.to_string()}</li> })
-                            .collect_view()
-                    }}
-
-                </ul>
-            }
-        }>
-
-            <div class="container">
-
-                <picture>
-                    <source
-                        srcset="https://raw.githubusercontent.com/leptos-rs/leptos/main/docs/logos/Leptos_logo_pref_dark_RGB.svg"
-                        media="(prefers-color-scheme: dark)"
-                    />
-                    <img
-                        src="https://raw.githubusercontent.com/leptos-rs/leptos/main/docs/logos/Leptos_logo_RGB.svg"
-                        alt="Leptos Logo"
-                        height="200"
-                        width="400"
-                    />
-                </picture>
-
-                <h1>"Welcome to Leptos"</h1>
-
-                <div class="buttons">
-                    <Button />
-                    <Button increment=5 />
-                </div>
-
-            </div>
-        </ErrorBoundary>
+                view! {
+                    <nav>
+                        <h1>{game_data.title.clone()}</h1>
+                    </nav>
+                    <hr/>
+                    <Game/>
+                    <hr/>
+                    <footer>
+                        <Scoreboard/>
+                    </footer>
+                }
+            }.into_any(),
+        }}
+        </Suspense>
     }
 }
