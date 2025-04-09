@@ -9,9 +9,9 @@ pub fn Timer() -> impl IntoView {
     let (read_time_remaining, set_time_remaining) = signal(30u32);
 
     let set_time_remaining_copy = set_time_remaining.clone();
-    let add_time = move |v| { set_time_remaining_copy.update(|d| { *d += v }) };
+    let add_time = move |v| { set_time_remaining_copy.update(|d| { *d = d.saturating_add(v) }) };
     let set_time_remaining_copy = set_time_remaining.clone();
-    let sub_time = move |v| { set_time_remaining_copy.update(|d| { *d -= v }) };
+    let sub_time = move |v| { set_time_remaining_copy.update(|d| { *d = d.saturating_sub(v) }) };
 
     let set_time_remaining_copy = set_time_remaining.clone();
     Effect::new(move || {
