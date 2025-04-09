@@ -2,6 +2,8 @@ use leptos::prelude::*;
 use leptos::server_fn::serde::{Deserialize, Serialize};
 use leptos_meta::*;
 use leptos_router::{components::*, path};
+use std::future::Future;
+
 
 // Modules
 mod components;
@@ -39,9 +41,9 @@ impl Default for Category {
 #[derive(Debug, Clone, Deserialize, Serialize)]
 pub enum QuestionType {
     Text(String),
-    Audio(String),
-    Video(String),
-    Image(String),
+    Audio(String, String),
+    Video(String, String),
+    Image(String, String),
 }
 
 #[derive(Debug, Clone, Deserialize, Serialize)]
@@ -53,14 +55,37 @@ pub struct Question {
 
 impl Default for Question {
     fn default() -> Self {
-        // Self {
-        //     answered: false,
-        //     question: QuestionType::Text(String::from("Evil?")),
-        //     answer: "Who is larry?".to_string(),
+        // let mut rng = rng();
+        // match rng.random_range(0..4) {
+        //     0 => Self {
+        //         answered: false,
+        //         question: QuestionType::Text(String::from("Evil?")),
+        //         answer: "Who is larry?".to_string(),
+        //     },
+        //     1 => Self {
+        //         answered: false,
+        //         question: QuestionType::Audio(String::from("https://static.wikia.nocookie.net/lethalcompanyzeekerss/images/3/3a/Babycry1.mp3"), String::from("Whomst maketh this soundy?")),
+        //         answer: "Who is larry?".to_string(),
+        //     },
+        //     2 => Self {
+        //         answered: false,
+        //         question: QuestionType::Video(String::from("https://www.youtube.com/embed/IsKyw-_aRdI?si=3O_GMKShwnjoYKxv"), String::from("WHompst killed this manz?")),
+        //         answer: "Who is larry?".to_string(),
+        //     },
+        //     3 => Self {
+        //         answered: false,
+        //         question: QuestionType::Image(String::from("https://static.wikia.nocookie.net/lethalcompanyzeekerss/images/e/e6/Site-logo.png"), String::from("Can you read?")),
+        //         answer: "No, you can't... but larry can".to_string(),
+        //     },
+        //     _ => Self {
+        //         answered: false,
+        //         question: QuestionType::Text(String::from("Evil?")),
+        //         answer: "Who is larry?".to_string(),
+        //     }
         // }
         Self {
             answered: false,
-            question: QuestionType::Text("Evil?".to_string()),
+            question: QuestionType::Text(String::from("Evil?")),
             answer: "Who is larry?".to_string(),
         }
     }
@@ -96,5 +121,16 @@ pub fn App() -> impl IntoView {
                 <Route path=path!("/") view=Home />
             </Routes>
         </Router>
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use std::fs;
+    #[test]
+    fn test_write_game_data() {
+        let game_data = GameData::default();
+        fs::write("questions/questions.json", serde_json::to_string_pretty(&game_data).unwrap()).unwrap();
     }
 }

@@ -3,6 +3,7 @@ use leptos::{component, view, IntoView};
 use leptos::context::use_context;
 use leptos::prelude::*;
 use crate::components::score::Score;
+use crate::components::timer::Timer;
 
 #[component]
 pub fn Scoreboard() -> impl IntoView {
@@ -19,10 +20,13 @@ pub fn Scoreboard() -> impl IntoView {
                     <button on:click=move |_| { set_scores.update(|scores| { scores.insert(read_name.get(), 0); }); } class="button-s">"Add Player"</button>
                 </div>
             </div>
-            { move || read_scores.get().iter()
-                .map(|(key, value)| { view! { <Score player=key.clone() score=value.clone() /> }})
-                .collect::<Vec<_>>()
-            }
+            <div class="player-scores">
+                { move || read_scores.get().iter()
+                    .map(|(key, value)| { view! { <Score player=key.clone() score=value.clone() /> }})
+                    .collect::<Vec<_>>()
+                }
+            </div>
+            <Timer />
         </div>
     }
 }

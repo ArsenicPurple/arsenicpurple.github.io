@@ -1,6 +1,9 @@
+pub mod scoreboard;
+pub mod controls;
 pub mod game;
 mod question;
-mod tile;
 mod column;
-pub mod scoreboard;
 mod score;
+mod tile;
+mod timer;
+

@@ -8,7 +8,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52abcd39-3b6d-454e-8181-d17a928b15dd" name="Changes" comment="final ugh">
+      <change afterPath="$PROJECT_DIR$/questions/questions.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/controls.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/timer.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cargo.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/game.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/game.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mod.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/question.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/question.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/score.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/score.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/scoreboard.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/scoreboard.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/home.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +29,13 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="RsBuildProfile:dev" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Rust File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -31,6 +51,9 @@
     &quot;accountId&quot;: &quot;57310191-9512-48d3-9eec-e9b1d9e4ce9c&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/components/controls.rs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="nOctAS2T" />
   </component>
@@ -43,22 +66,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.rust.reset.selective.auto.import&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;org.rust.cargo.project.model.PROJECT_DISCOVERY&quot;: &quot;true&quot;,
-    &quot;org.rust.first.attach.projects&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Cargo.Run jeopardy_csr.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.rust.reset.selective.auto.import": "true",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "org.rust.cargo.project.model.PROJECT_DISCOVERY": "true",
+    "org.rust.cargo.project.model.impl.CargoExternalSystemProjectAware.subscribe.first.balloon": "",
+    "org.rust.first.attach.projects": "true",
+    "settings.editor.selected.configurable": "editor.preferences.inline.completion",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Cargo.Run jeopardy_csr">
     <configuration name="Run jeopardy_csr" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
       <option name="buildProfileId" value="dev" />
@@ -109,7 +135,8 @@
       <updated>1744007187297</updated>
       <workItem from="1744007188730" duration="168000" />
       <workItem from="1744007372487" duration="524000" />
-      <workItem from="1744049812185" duration="1431000" />
+      <workItem from="1744049812185" duration="17240000" />
+      <workItem from="1744077893989" duration="40872000" />
     </task>
     <task id="LOCAL-00001" summary="final ugh">
       <option name="closed" value="true" />
@@ -144,5 +171,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="final ugh" />
     <option name="LAST_COMMIT_MESSAGE" value="final ugh" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

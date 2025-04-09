@@ -36,7 +36,37 @@ body {
 }
 
 nav {
-  margin: 10px;
+  display: flex;
+  flex-flow: row;
+}
+
+#header-filler {
+  width: 33%;
+}
+
+#title-container {
+  width: 33%;
+}
+
+#file-container {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  width: 33%;
+}
+
+#file-input-label {
+  color: $foreground-med;
+  font-size: 1rem;
+  border-radius: 8px;
+  padding: 3px;
+  border: 2px solid $foreground-med;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+input[type=file] {
+  display: none;
 }
 
 hr {
@@ -59,8 +89,26 @@ footer {
 .question {
   display: flex;
   flex-flow: column;
+  align-items: center;
+  justify-items: center;
   flex: auto;
   padding: 30px;
+}
+
+.question-text {
+  flex: auto;
+}
+
+.question-audio {
+  flex: auto;
+}
+
+.question-video {
+  flex: auto;
+}
+
+.question-image {
+  flex: auto;
 }
 
 .column {
@@ -173,7 +221,7 @@ footer {
 }
 
 @media (min-width: 768px) {
-  button {
+  .button-s {
     padding: 0 40px;
   }
 }
@@ -202,7 +250,7 @@ footer {
   width: 164px;
 }
 
-input {
+input[type=number],input[type=text] {
   background-color: $foreground-med;
   color: $background-med;
   font-size: 1.25rem;
@@ -211,8 +259,65 @@ input {
   width: 75%;
 }
 
-.scorebox {
-  width: 96px;
+.player-scores {
+  display: flex;
+  flex-flow: row;
 }
+
+//.scorebox {
+//  width: 96px;
+//}
+
+.scorebox-buttons {
+  text-align: center;
+}
+
+.scorebox-button {
+  font-size: 1.5rem;
+  font-weight: 900;
+  background-color: $background-med;
+  color: $foreground-med;
+  border: 2px solid $foreground-med;
+  border-radius: 8px;
+  width: 34px;
+}
+
+.timer {
+  font-size: 1.5rem;
+  display: flex;
+  flex-flow: column;
+  width: 192px;
+  padding: 25px;
+  border-radius: 8px;
+  border: 2px solid $foreground-med;
+  align-self: flex-end;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.timer-controls {
+  display: flex;
+  flex-flow: row;
+  flex: auto;
+}
+
+.timer-add-time {
+  font-size: 0.9rem;
+  background-color: $background-med;
+  color: $foreground-med;
+  border: 2px solid $foreground-med;
+  border-radius: 8px;
+  flex: auto;
+}
+
+.timer-start-stop {
+  background-color: $background-med;
+  color: $foreground-med;
+  border: 2px solid $foreground-med;
+  border-radius: 8px;
+  flex: auto;
+}
+
+
 
 
