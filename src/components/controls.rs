@@ -1,17 +1,18 @@
-use leptos::html::Input;
-use leptos::IntoView;
-use leptos::leptos_dom::log;
+use crate::{create_answered_storage, GameData};
 use leptos::prelude::*;
 use leptos::task::spawn_local;
+use leptos::IntoView;
 use wasm_bindgen::JsCast;
 use wasm_bindgen_futures::js_sys::{ArrayBuffer, Uint8Array};
 use web_sys::{Blob, HtmlInputElement};
-use crate::GameData;
 
 #[component]
 pub fn Controls() -> impl IntoView {
     let read_game_data = use_context::<ArcReadSignal<GameData>>().expect("Error");
     let set_game_data = use_context::<ArcWriteSignal<GameData>>().expect("Error");
+
+    let set_answered = use_context::<WriteSignal<Vec<Vec<bool>>>>().expect("Error");
+
     view! {
         <div id="header-filler">
         </div>
@@ -29,10 +30,12 @@ pub fn Controls() -> impl IntoView {
                         if let Some(file) = files.item(0) {
                             if let Ok(blob) = file.slice() {
                                 spawn_local({
-                                    let sgd_copy = set_game_data.clone();
+                                    let set_game_data_copy = set_game_data.clone();
+                                    let set_answered_copy = set_answered.clone();
                                     async move {
                                         let game_data = parse_file_blob(blob).await;
-                                        sgd_copy.set(game_data);
+                                        set_answered_copy.set(create_answered_storage(game_data.categories.len(), game_data.categories[0].questions.len()));
+                                        set_game_data_copy.set(game_data);
                                     }
                                 })
                             }

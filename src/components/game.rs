@@ -13,13 +13,14 @@ pub fn Game() -> impl IntoView {
 
     let read_game_data = use_context::<ArcReadSignal<GameData>>().expect("Error");
     let read_game_state = use_context::<ArcReadSignal<GameState>>().expect("Error");
+    let read_answered = use_context::<ReadSignal<Vec<Vec<bool>>>>().expect("Error");
 
     view! {
         { move || match read_game_state.get() {
             GameState::Home => view! {
                 {
-                    read_game_data.get().categories.iter().enumerate()
-                        .map(|(id, category)| view! { <Column id=id title=category.title.clone() questions=category.questions.clone() /> })
+                    read_game_data.get().categories.iter().zip(read_answered.get()).enumerate()
+                        .map(|(id, (category, answered))| view! { <Column id=id title=category.title.clone() questions=category.questions.clone() answered=answered /> })
                         .collect::<Vec<_>>()
                 }
             }.into_any(),

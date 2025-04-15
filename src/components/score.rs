@@ -15,7 +15,7 @@ pub fn Score(player: String, score: u32) -> impl IntoView {
     let read_game_state_copy = read_game_state.clone();
     let add_score = move || {
         let Question((_, row)) = read_game_state_copy.get() else { return };
-        set_scores_copy.update(|map| { map.entry(key.clone()).and_modify(|score| { *score = score.saturating_add((100 * (row as u32 + 1))); }); });
+        set_scores_copy.update(|map| { map.entry(key.clone()).and_modify(|score| { *score = score.saturating_add(100 * (row as u32 + 1)); }); });
     };
 
     let key = player.clone();
@@ -23,7 +23,7 @@ pub fn Score(player: String, score: u32) -> impl IntoView {
     let read_game_state_copy = read_game_state.clone();
     let sub_score = move || {
         let Question((_, row)) = read_game_state_copy.get() else { return };
-        set_scores_copy.update(|map| { map.entry(key.clone()).and_modify(|score| { *score = score.saturating_sub((100 * (row as u32 + 1))); }); });
+        set_scores_copy.update(|map| { map.entry(key.clone()).and_modify(|score| { *score = score.saturating_sub(100 * (row as u32 + 1)); }); });
     };
 
     view! {

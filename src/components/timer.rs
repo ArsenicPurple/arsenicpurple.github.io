@@ -13,7 +13,6 @@ pub fn Timer() -> impl IntoView {
     let set_time_remaining_copy = set_time_remaining.clone();
     let sub_time = move |v| { set_time_remaining_copy.update(|d| { *d = d.saturating_sub(v) }) };
 
-    let set_time_remaining_copy = set_time_remaining.clone();
     Effect::new(move || {
         if read_timer_done.get() {
             if let Some(interval_handle) = read_ticking.get() {
@@ -29,7 +28,7 @@ pub fn Timer() -> impl IntoView {
                 <button on:click=move |_| { sub_time(30) } class="timer-add-time">"-30"</button>
                 <button on:click=move |_| { sub_time(10) } class="timer-add-time">"-10"</button>
                 <button
-                    on:click=move |x| {
+                    on:click=move |_| {
                         if let Some(interval_handle) = read_ticking.get() {
                             interval_handle.clear();
                             set_ticking.set(None);

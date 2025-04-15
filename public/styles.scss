@@ -86,6 +86,25 @@ footer {
   margin: 10px;
 }
 
+#back-button {
+  position: absolute;
+  left: 1%;
+  top: 10%;
+}
+
+#question-multiplier {
+  position: absolute;
+  left: 1%;
+  top: 25%;
+}
+
+.question-container {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  flex: auto;
+}
+
 .question {
   display: flex;
   flex-flow: column;
@@ -95,20 +114,33 @@ footer {
   padding: 30px;
 }
 
-.question-text {
+.answer {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-items: center;
+  flex: auto;
+  padding: 30px;
+}
+
+#question-text {
   flex: auto;
 }
 
-.question-audio {
+#question-audio {
   flex: auto;
 }
 
-.question-video {
+#question-video {
   flex: auto;
 }
 
-.question-image {
+#question-image {
   flex: auto;
+}
+
+.blurred {
+  filter: blur(8px);
 }
 
 .column {
@@ -141,7 +173,7 @@ footer {
   touch-action: manipulation
 }
 
-.tile-exhausted {
+.tile-answered {
   flex: auto;
   margin: 10px;
   text-align: center;
@@ -316,6 +348,23 @@ input[type=number],input[type=text] {
   border: 2px solid $foreground-med;
   border-radius: 8px;
   flex: auto;
+}
+
+.popup {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  font-weight: 900;
+  z-index: 1000;
+  background-color: $background-med;
+  border: 2px solid $foreground-med;
+  border-radius: 8px;
+  width: 700px;
+  height: 500px;
 }
 
 

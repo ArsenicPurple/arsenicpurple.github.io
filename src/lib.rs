@@ -2,8 +2,6 @@ use leptos::prelude::*;
 use leptos::server_fn::serde::{Deserialize, Serialize};
 use leptos_meta::*;
 use leptos_router::{components::*, path};
-use std::future::Future;
-
 
 // Modules
 mod components;
@@ -21,6 +19,7 @@ pub enum GameState {
 #[derive(Debug, Clone, Deserialize, Serialize)]
 pub struct GameData {
     pub title: String,
+    pub multiplier: f32,
     pub categories: Vec<Category>,
 }
 
@@ -40,53 +39,50 @@ impl Default for Category {
 
 #[derive(Debug, Clone, Deserialize, Serialize)]
 pub enum QuestionType {
-    Text(String),
-    Audio(String, String),
-    Video(String, String),
-    Image(String, String),
+    Text(TextOptions),
+    Audio(AudioOptions),
+    Video(VideoOptions),
+    Image(ImageOptions),
+}
+
+#[derive(Debug, Clone, Deserialize, Serialize)]
+pub struct TextOptions {
+    text: String,
+}
+
+#[derive(Debug, Clone, Deserialize, Serialize)]
+pub struct AudioOptions {
+    link: String,
+    text: String,
+}
+
+#[derive(Debug, Clone, Deserialize, Serialize)]
+pub struct VideoOptions {
+    link: String,
+    text: String,
+    blurred: bool
+}
+
+#[derive(Debug, Clone, Deserialize, Serialize)]
+pub struct ImageOptions {
+    link: String,
+    text: String,
+    blurred: bool
 }
 
 #[derive(Debug, Clone, Deserialize, Serialize)]
 pub struct Question {
-    pub answered: bool,
     pub question: QuestionType,
     pub answer: String,
+    pub multiplier: f32,
 }
 
 impl Default for Question {
     fn default() -> Self {
-        // let mut rng = rng();
-        // match rng.random_range(0..4) {
-        //     0 => Self {
-        //         answered: false,
-        //         question: QuestionType::Text(String::from("Evil?")),
-        //         answer: "Who is larry?".to_string(),
-        //     },
-        //     1 => Self {
-        //         answered: false,
-        //         question: QuestionType::Audio(String::from("https://static.wikia.nocookie.net/lethalcompanyzeekerss/images/3/3a/Babycry1.mp3"), String::from("Whomst maketh this soundy?")),
-        //         answer: "Who is larry?".to_string(),
-        //     },
-        //     2 => Self {
-        //         answered: false,
-        //         question: QuestionType::Video(String::from("https://www.youtube.com/embed/IsKyw-_aRdI?si=3O_GMKShwnjoYKxv"), String::from("WHompst killed this manz?")),
-        //         answer: "Who is larry?".to_string(),
-        //     },
-        //     3 => Self {
-        //         answered: false,
-        //         question: QuestionType::Image(String::from("https://static.wikia.nocookie.net/lethalcompanyzeekerss/images/e/e6/Site-logo.png"), String::from("Can you read?")),
-        //         answer: "No, you can't... but larry can".to_string(),
-        //     },
-        //     _ => Self {
-        //         answered: false,
-        //         question: QuestionType::Text(String::from("Evil?")),
-        //         answer: "Who is larry?".to_string(),
-        //     }
-        // }
         Self {
-            answered: false,
-            question: QuestionType::Text(String::from("Evil?")),
+            question: QuestionType::Text(TextOptions { text: String::from("Evil?") }),
             answer: "Who is larry?".to_string(),
+            multiplier: 1.0,
         }
     }
 }
@@ -96,8 +92,21 @@ impl Default for GameData {
         Self {
             title: "Peenarverse Jeopardy".to_string(),
             categories: vec![Category::default(), Category::default(), Category::default(), Category::default(), Category::default()],
+            multiplier: 1.,
         }
     }
+}
+
+pub fn create_answered_storage(columns: usize, rows: usize) -> Vec<Vec<bool>> {
+    let mut answered: Vec<Vec<bool>> = Vec::new();
+    for c in 0..columns {
+        answered.push(Vec::<bool>::new());
+        for _ in 0..rows {
+            answered[c].push(false);
+        }
+    }
+
+    answered
 }
 
 /// An app router which renders the homepage and handles 404's
@@ -107,7 +116,7 @@ pub fn App() -> impl IntoView {
     provide_meta_context();
 
     view! {
-        <Html attr:lang="en" attr:dir="ltr" attr:data-theme="light" />
+        <Html attr:lang="en" attr:dir="ltr" attr:data-theme="dark" />
 
         // sets the document title
         <Title text="Welcome to Leptos CSR" />
@@ -127,10 +136,88 @@ pub fn App() -> impl IntoView {
 #[cfg(test)]
 mod tests {
     use super::*;
+    use rand::{rng, Rng};
     use std::fs;
+    use rand::rngs::ThreadRng;
+
     #[test]
     fn test_write_game_data() {
-        let game_data = GameData::default();
+        let mut rng = rng();
+        let game_data = GameData::random(&mut rng);
         fs::write("questions/questions.json", serde_json::to_string_pretty(&game_data).unwrap()).unwrap();
+    }
+
+    impl GameData {
+        fn random(rng: &mut ThreadRng) -> Self {
+            let mut categories: Vec<Category> = Vec::new();
+            let max = rng.random_range(5..11);
+            let questions_per_cat = rng.random_range(5..11);
+            for _ in 0..max {
+                categories.push(Category::random(rng, questions_per_cat));
+            }
+            Self {
+                title: "Randomly Generated".to_string(),
+                multiplier: rng.random_range(1.0..2.0),
+                categories,
+            }
+        }
+    }
+
+    impl Category {
+        fn random(rng: &mut ThreadRng, questions_per_cat: u32) -> Self {
+            let mut questions: Vec<Question> = Vec::new();
+            let max = rng.random_range(5..11);
+            for _ in 0..questions_per_cat {
+                questions.push(Question::random(rng));
+            }
+            Self {
+                title: "Randomly Generated".to_string(),
+                questions,
+            }
+        }
+    }
+
+    impl Question {
+        fn random(rng: &mut ThreadRng) -> Self {
+            let multiplier = rng.random_range(1.0..5.0);
+            match rng.random_range(0..4) {
+                0 => Self {
+                    question: QuestionType::Text(TextOptions { text: String::from("Evil?") }),
+                    answer: "Who is larry?".to_string(),
+                    multiplier,
+                },
+                1 => Self {
+                    question: QuestionType::Audio(AudioOptions {
+                        link: String::from("https://static.wikia.nocookie.net/lethalcompanyzeekerss/images/3/3a/Babycry1.mp3"),
+                        text: String::from("Whomst maketh this soundy?"),
+                    }),
+                    answer: "Who is larry?".to_string(),
+                    multiplier,
+                },
+                2 => Self {
+                    question: QuestionType::Video(VideoOptions {
+                        link: String::from("https://www.youtube.com/embed/IsKyw-_aRdI?si=3O_GMKShwnjoYKxv"),
+                        text: String::from("WHompst killed this manz?"),
+                        blurred: true,
+                    }),
+                    answer: "Who is larry?".to_string(),
+                    multiplier,
+                },
+                3 => Self {
+                    question: QuestionType::Image(ImageOptions {
+                        link: String::from("https://static.wikia.nocookie.net/lethalcompanyzeekerss/images/e/e6/Site-logo.png"),
+                        text: String::from("Can you read?"),
+                        blurred: true,
+                    }),
+                    answer: "No, you can't... but larry can".to_string(),
+                    multiplier,
+                },
+                _ => Self {
+                    question: QuestionType::Text(TextOptions { text: String::from("Evil?") }),
+                    answer: "Who is larry?".to_string(),
+                    multiplier,
+                }
+            }
+        }
     }
 }
