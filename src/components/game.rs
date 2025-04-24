@@ -25,7 +25,7 @@ pub fn Game() -> impl IntoView {
                 }
             }.into_any(),
             GameState::Question((column, row)) => view! {
-                <Question question=read_game_data.get().categories[column].questions[row].clone()/>
+                <Question question=read_game_data.get().categories[column].questions[row].clone() index=row />
             }.into_any()
         }}
     }

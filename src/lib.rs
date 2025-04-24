@@ -11,6 +11,18 @@ mod pages;
 use crate::pages::home::Home;
 
 #[derive(Debug, Copy, Clone)]
+pub struct PointsData {
+    pub board_multiplier: f32,
+    pub current_question_points: u32,
+}
+
+impl PointsData {
+    pub fn update_question_points(&mut self, index: usize, multiplier: f32) {
+        self.current_question_points = (((index + 1) * 100) as f32 * multiplier * self.board_multiplier) as u32;
+    }
+}
+
+#[derive(Debug, Copy, Clone)]
 pub enum GameState {
     Home,
     Question((usize, usize)),
@@ -150,14 +162,14 @@ mod tests {
     impl GameData {
         fn random(rng: &mut ThreadRng) -> Self {
             let mut categories: Vec<Category> = Vec::new();
-            let max = rng.random_range(5..11);
-            let questions_per_cat = rng.random_range(5..11);
-            for _ in 0..max {
-                categories.push(Category::random(rng, questions_per_cat));
+            let category_count = 5;
+            let questions_per_category = 5;
+            for _ in 0..category_count {
+                categories.push(Category::random(rng, questions_per_category));
             }
             Self {
                 title: "Randomly Generated".to_string(),
-                multiplier: rng.random_range(1.0..2.0),
+                multiplier: 2.,
                 categories,
             }
         }
@@ -166,7 +178,6 @@ mod tests {
     impl Category {
         fn random(rng: &mut ThreadRng, questions_per_cat: u32) -> Self {
             let mut questions: Vec<Question> = Vec::new();
-            let max = rng.random_range(5..11);
             for _ in 0..questions_per_cat {
                 questions.push(Question::random(rng));
             }
@@ -179,7 +190,7 @@ mod tests {
 
     impl Question {
         fn random(rng: &mut ThreadRng) -> Self {
-            let multiplier = rng.random_range(1.0..5.0);
+            let multiplier = 1.;
             match rng.random_range(0..4) {
                 0 => Self {
                     question: QuestionType::Text(TextOptions { text: String::from("Evil?") }),

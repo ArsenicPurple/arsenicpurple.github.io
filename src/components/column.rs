@@ -10,7 +10,7 @@ pub fn Column(id: usize, title: String, questions: Vec<Question>, answered: Vec<
             <h2>{title}</h2>
             {
                 questions.into_iter().enumerate()
-                    .map(|(index, _)| view! { <Tile value=((index+1)*100) as u32 location=(id, index) answered=answered[index] /> })
+                    .map(|(index, _)| view! { <Tile location=(id, index) answered=answered[index] /> })
                     .collect::<Vec<_>>()
             }
         </div>

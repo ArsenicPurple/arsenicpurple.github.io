@@ -1,4 +1,4 @@
-use crate::{create_answered_storage, GameData};
+use crate::{create_answered_storage, GameData, PointsData};
 use leptos::prelude::*;
 use leptos::task::spawn_local;
 use leptos::IntoView;
@@ -9,9 +9,10 @@ use web_sys::{Blob, HtmlInputElement};
 #[component]
 pub fn Controls() -> impl IntoView {
     let read_game_data = use_context::<ArcReadSignal<GameData>>().expect("Error");
-    let set_game_data = use_context::<ArcWriteSignal<GameData>>().expect("Error");
 
+    let set_game_data = use_context::<ArcWriteSignal<GameData>>().expect("Error");
     let set_answered = use_context::<WriteSignal<Vec<Vec<bool>>>>().expect("Error");
+    let set_points_data = use_context::<ArcWriteSignal<PointsData>>().expect("Error");
 
     view! {
         <div id="header-filler">
@@ -32,8 +33,10 @@ pub fn Controls() -> impl IntoView {
                                 spawn_local({
                                     let set_game_data_copy = set_game_data.clone();
                                     let set_answered_copy = set_answered.clone();
+                                    let set_points_data_copy = set_points_data.clone();
                                     async move {
                                         let game_data = parse_file_blob(blob).await;
+                                        set_points_data_copy.update(|points_data| points_data.board_multiplier = game_data.multiplier);
                                         set_answered_copy.set(create_answered_storage(game_data.categories.len(), game_data.categories[0].questions.len()));
                                         set_game_data_copy.set(game_data);
                                     }

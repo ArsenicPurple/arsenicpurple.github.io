@@ -1,23 +1,12 @@
 {
   "title": "Randomly Generated",
-  "multiplier": 1,
+  "multiplier": 2.0,
   "categories": [
     {
       "title": "Randomly Generated",
       "questions": [
         {
           "question": {
-            "Image": {
-              "link": "https://static.wikia.nocookie.net/lethalcompanyzeekerss/images/e/e6/Site-logo.png",
-              "text": "Can you read?",
-              "blurred": true
-            }
-          },
-          "answer": "No, you can't... but larry can",
-          "multiplier": 2
-        },
-        {
-          "question": {
             "Video": {
               "link": "https://www.youtube.com/embed/IsKyw-_aRdI?si=3O_GMKShwnjoYKxv",
               "text": "WHompst killed this manz?",
@@ -25,47 +14,7 @@
             }
           },
           "answer": "Who is larry?",
-          "multiplier": 1.0796971
-        },
-        {
-          "question": {
-            "Video": {
-              "link": "https://www.youtube.com/embed/IsKyw-_aRdI?si=3O_GMKShwnjoYKxv",
-              "text": "WHompst killed this manz?",
-              "blurred": true
-            }
-          },
-          "answer": "Who is larry?",
-          "multiplier": 3.7634602
-        },
-        {
-          "question": {
-            "Text": {
-              "text": "Evil?"
-            }
-          },
-          "answer": "Who is larry?",
-          "multiplier": 3.6839375
-        },
-        {
-          "question": {
-            "Text": {
-              "text": "Evil?"
-            }
-          },
-          "answer": "Who is larry?",
-          "multiplier": 4.495924
-        },
-        {
-          "question": {
-            "Video": {
-              "link": "https://www.youtube.com/embed/IsKyw-_aRdI?si=3O_GMKShwnjoYKxv",
-              "text": "WHompst killed this manz?",
-              "blurred": true
-            }
-          },
-          "answer": "Who is larry?",
-          "multiplier": 4.3515544
+          "multiplier": 3.0
         },
         {
           "question": {
@@ -76,7 +25,16 @@
             }
           },
           "answer": "No, you can't... but larry can",
-          "multiplier": 4.0565605
+          "multiplier": 1.0
+        },
+        {
+          "question": {
+            "Text": {
+              "text": "Evil?"
+            }
+          },
+          "answer": "Who is larry?",
+          "multiplier": 1.0
         },
         {
           "question": {
@@ -87,7 +45,7 @@
             }
           },
           "answer": "No, you can't... but larry can",
-          "multiplier": 2.2162251
+          "multiplier": 1.0
         },
         {
           "question": {
@@ -98,231 +56,7 @@
             }
           },
           "answer": "Who is larry?",
-          "multiplier": 2.0728412
-        },
-        {
-          "question": {
-            "Audio": {
-              "link": "https://static.wikia.nocookie.net/lethalcompanyzeekerss/images/3/3a/Babycry1.mp3",
-              "text": "Whomst maketh this soundy?"
-            }
-          },
-          "answer": "Who is larry?",
-          "multiplier": 4.681168
-        }
-      ]
-    },
-    {
-      "title": "Randomly Generated",
-      "questions": [
-        {
-          "question": {
-            "Audio": {
-              "link": "https://static.wikia.nocookie.net/lethalcompanyzeekerss/images/3/3a/Babycry1.mp3",
-              "text": "Whomst maketh this soundy?"
-            }
-          },
-          "answer": "Who is larry?",
-          "multiplier": 1.6818409
-        },
-        {
-          "question": {
-            "Text": {
-              "text": "Evil?"
-            }
-          },
-          "answer": "Who is larry?",
-          "multiplier": 3.346858
-        },
-        {
-          "question": {
-            "Text": {
-              "text": "Evil?"
-            }
-          },
-          "answer": "Who is larry?",
-          "multiplier": 4.219846
-        },
-        {
-          "question": {
-            "Text": {
-              "text": "Evil?"
-            }
-          },
-          "answer": "Who is larry?",
-          "multiplier": 2.5540433
-        },
-        {
-          "question": {
-            "Video": {
-              "link": "https://www.youtube.com/embed/IsKyw-_aRdI?si=3O_GMKShwnjoYKxv",
-              "text": "WHompst killed this manz?",
-              "blurred": true
-            }
-          },
-          "answer": "Who is larry?",
-          "multiplier": 4.3703446
-        },
-        {
-          "question": {
-            "Audio": {
-              "link": "https://static.wikia.nocookie.net/lethalcompanyzeekerss/images/3/3a/Babycry1.mp3",
-              "text": "Whomst maketh this soundy?"
-            }
-          },
-          "answer": "Who is larry?",
-          "multiplier": 2.7411747
-        },
-        {
-          "question": {
-            "Video": {
-              "link": "https://www.youtube.com/embed/IsKyw-_aRdI?si=3O_GMKShwnjoYKxv",
-              "text": "WHompst killed this manz?",
-              "blurred": true
-            }
-          },
-          "answer": "Who is larry?",
-          "multiplier": 3.984624
-        },
-        {
-          "question": {
-            "Audio": {
-              "link": "https://static.wikia.nocookie.net/lethalcompanyzeekerss/images/3/3a/Babycry1.mp3",
-              "text": "Whomst maketh this soundy?"
-            }
-          },
-          "answer": "Who is larry?",
-          "multiplier": 3.042029
-        },
-        {
-          "question": {
-            "Video": {
-              "link": "https://www.youtube.com/embed/IsKyw-_aRdI?si=3O_GMKShwnjoYKxv",
-              "text": "WHompst killed this manz?",
-              "blurred": true
-            }
-          },
-          "answer": "Who is larry?",
-          "multiplier": 1.1296077
-        },
-        {
-          "question": {
-            "Text": {
-              "text": "Evil?"
-            }
-          },
-          "answer": "Who is larry?",
-          "multiplier": 3.440351
-        }
-      ]
-    },
-    {
-      "title": "Randomly Generated",
-      "questions": [
-        {
-          "question": {
-            "Text": {
-              "text": "Evil?"
-            }
-          },
-          "answer": "Who is larry?",
-          "multiplier": 2.7112532
-        },
-        {
-          "question": {
-            "Video": {
-              "link": "https://www.youtube.com/embed/IsKyw-_aRdI?si=3O_GMKShwnjoYKxv",
-              "text": "WHompst killed this manz?",
-              "blurred": true
-            }
-          },
-          "answer": "Who is larry?",
-          "multiplier": 1.5551453
-        },
-        {
-          "question": {
-            "Video": {
-              "link": "https://www.youtube.com/embed/IsKyw-_aRdI?si=3O_GMKShwnjoYKxv",
-              "text": "WHompst killed this manz?",
-              "blurred": true
-            }
-          },
-          "answer": "Who is larry?",
-          "multiplier": 2.979
-        },
-        {
-          "question": {
-            "Text": {
-              "text": "Evil?"
-            }
-          },
-          "answer": "Who is larry?",
-          "multiplier": 3.6619654
-        },
-        {
-          "question": {
-            "Image": {
-              "link": "https://static.wikia.nocookie.net/lethalcompanyzeekerss/images/e/e6/Site-logo.png",
-              "text": "Can you read?",
-              "blurred": true
-            }
-          },
-          "answer": "No, you can't... but larry can",
-          "multiplier": 3.507288
-        },
-        {
-          "question": {
-            "Image": {
-              "link": "https://static.wikia.nocookie.net/lethalcompanyzeekerss/images/e/e6/Site-logo.png",
-              "text": "Can you read?",
-              "blurred": true
-            }
-          },
-          "answer": "No, you can't... but larry can",
-          "multiplier": 1.4061027
-        },
-        {
-          "question": {
-            "Video": {
-              "link": "https://www.youtube.com/embed/IsKyw-_aRdI?si=3O_GMKShwnjoYKxv",
-              "text": "WHompst killed this manz?",
-              "blurred": true
-            }
-          },
-          "answer": "Who is larry?",
-          "multiplier": 1.051467
-        },
-        {
-          "question": {
-            "Image": {
-              "link": "https://static.wikia.nocookie.net/lethalcompanyzeekerss/images/e/e6/Site-logo.png",
-              "text": "Can you read?",
-              "blurred": true
-            }
-          },
-          "answer": "No, you can't... but larry can",
-          "multiplier": 1.0638108
-        },
-        {
-          "question": {
-            "Audio": {
-              "link": "https://static.wikia.nocookie.net/lethalcompanyzeekerss/images/3/3a/Babycry1.mp3",
-              "text": "Whomst maketh this soundy?"
-            }
-          },
-          "answer": "Who is larry?",
-          "multiplier": 1.5933857
-        },
-        {
-          "question": {
-            "Image": {
-              "link": "https://static.wikia.nocookie.net/lethalcompanyzeekerss/images/e/e6/Site-logo.png",
-              "text": "Can you read?",
-              "blurred": true
-            }
-          },
-          "answer": "No, you can't... but larry can",
-          "multiplier": 3.118001
+          "multiplier": 1.0
         }
       ]
     },
@@ -338,7 +72,16 @@
             }
           },
           "answer": "Who is larry?",
-          "multiplier": 2.357913
+          "multiplier": 1.0
+        },
+        {
+          "question": {
+            "Text": {
+              "text": "Evil?"
+            }
+          },
+          "answer": "Who is larry?",
+          "multiplier": 1.0
         },
         {
           "question": {
@@ -349,7 +92,17 @@
             }
           },
           "answer": "Who is larry?",
-          "multiplier": 1.1388698
+          "multiplier": 1.0
+        },
+        {
+          "question": {
+            "Audio": {
+              "link": "https://static.wikia.nocookie.net/lethalcompanyzeekerss/images/3/3a/Babycry1.mp3",
+              "text": "Whomst maketh this soundy?"
+            }
+          },
+          "answer": "Who is larry?",
+          "multiplier": 1.0
         },
         {
           "question": {
@@ -358,16 +111,22 @@
             }
           },
           "answer": "Who is larry?",
-          "multiplier": 1.5499277
-        },
+          "multiplier": 1.0
+        }
+      ]
+    },
+    {
+      "title": "Randomly Generated",
+      "questions": [
         {
           "question": {
-            "Text": {
-              "text": "Evil?"
+            "Audio": {
+              "link": "https://static.wikia.nocookie.net/lethalcompanyzeekerss/images/3/3a/Babycry1.mp3",
+              "text": "Whomst maketh this soundy?"
             }
           },
           "answer": "Who is larry?",
-          "multiplier": 4.917235
+          "multiplier": 1.0
         },
         {
           "question": {
@@ -378,7 +137,18 @@
             }
           },
           "answer": "No, you can't... but larry can",
-          "multiplier": 4.7873096
+          "multiplier": 1.0
+        },
+        {
+          "question": {
+            "Video": {
+              "link": "https://www.youtube.com/embed/IsKyw-_aRdI?si=3O_GMKShwnjoYKxv",
+              "text": "WHompst killed this manz?",
+              "blurred": true
+            }
+          },
+          "answer": "Who is larry?",
+          "multiplier": 1.0
         },
         {
           "question": {
@@ -389,34 +159,7 @@
             }
           },
           "answer": "No, you can't... but larry can",
-          "multiplier": 2.3410172
-        },
-        {
-          "question": {
-            "Text": {
-              "text": "Evil?"
-            }
-          },
-          "answer": "Who is larry?",
-          "multiplier": 1.638382
-        },
-        {
-          "question": {
-            "Text": {
-              "text": "Evil?"
-            }
-          },
-          "answer": "Who is larry?",
-          "multiplier": 3.8842764
-        },
-        {
-          "question": {
-            "Text": {
-              "text": "Evil?"
-            }
-          },
-          "answer": "Who is larry?",
-          "multiplier": 1.0622282
+          "multiplier": 1.0
         },
         {
           "question": {
@@ -427,7 +170,7 @@
             }
           },
           "answer": "No, you can't... but larry can",
-          "multiplier": 4.110184
+          "multiplier": 1.0
         }
       ]
     },
@@ -443,7 +186,16 @@
             }
           },
           "answer": "Who is larry?",
-          "multiplier": 1.1128249
+          "multiplier": 1.0
+        },
+        {
+          "question": {
+            "Text": {
+              "text": "Evil?"
+            }
+          },
+          "answer": "Who is larry?",
+          "multiplier": 1.0
         },
         {
           "question": {
@@ -453,7 +205,7 @@
             }
           },
           "answer": "Who is larry?",
-          "multiplier": 3.0174212
+          "multiplier": 1.0
         },
         {
           "question": {
@@ -463,18 +215,7 @@
             }
           },
           "answer": "Who is larry?",
-          "multiplier": 4.2803535
-        },
-        {
-          "question": {
-            "Video": {
-              "link": "https://www.youtube.com/embed/IsKyw-_aRdI?si=3O_GMKShwnjoYKxv",
-              "text": "WHompst killed this manz?",
-              "blurred": true
-            }
-          },
-          "answer": "Who is larry?",
-          "multiplier": 2.1792402
+          "multiplier": 1.0
         },
         {
           "question": {
@@ -485,59 +226,7 @@
             }
           },
           "answer": "No, you can't... but larry can",
-          "multiplier": 3.385911
-        },
-        {
-          "question": {
-            "Audio": {
-              "link": "https://static.wikia.nocookie.net/lethalcompanyzeekerss/images/3/3a/Babycry1.mp3",
-              "text": "Whomst maketh this soundy?"
-            }
-          },
-          "answer": "Who is larry?",
-          "multiplier": 2.6256647
-        },
-        {
-          "question": {
-            "Video": {
-              "link": "https://www.youtube.com/embed/IsKyw-_aRdI?si=3O_GMKShwnjoYKxv",
-              "text": "WHompst killed this manz?",
-              "blurred": true
-            }
-          },
-          "answer": "Who is larry?",
-          "multiplier": 4.859344
-        },
-        {
-          "question": {
-            "Audio": {
-              "link": "https://static.wikia.nocookie.net/lethalcompanyzeekerss/images/3/3a/Babycry1.mp3",
-              "text": "Whomst maketh this soundy?"
-            }
-          },
-          "answer": "Who is larry?",
-          "multiplier": 4.2707305
-        },
-        {
-          "question": {
-            "Video": {
-              "link": "https://www.youtube.com/embed/IsKyw-_aRdI?si=3O_GMKShwnjoYKxv",
-              "text": "WHompst killed this manz?",
-              "blurred": true
-            }
-          },
-          "answer": "Who is larry?",
-          "multiplier": 1.5755572
-        },
-        {
-          "question": {
-            "Audio": {
-              "link": "https://static.wikia.nocookie.net/lethalcompanyzeekerss/images/3/3a/Babycry1.mp3",
-              "text": "Whomst maketh this soundy?"
-            }
-          },
-          "answer": "Who is larry?",
-          "multiplier": 2.6781354
+          "multiplier": 1.0
         }
       ]
     },
@@ -546,35 +235,12 @@
       "questions": [
         {
           "question": {
-            "Audio": {
-              "link": "https://static.wikia.nocookie.net/lethalcompanyzeekerss/images/3/3a/Babycry1.mp3",
-              "text": "Whomst maketh this soundy?"
+            "Text": {
+              "text": "Evil?"
             }
           },
           "answer": "Who is larry?",
-          "multiplier": 4.9064183
-        },
-        {
-          "question": {
-            "Image": {
-              "link": "https://static.wikia.nocookie.net/lethalcompanyzeekerss/images/e/e6/Site-logo.png",
-              "text": "Can you read?",
-              "blurred": true
-            }
-          },
-          "answer": "No, you can't... but larry can",
-          "multiplier": 1.7534375
-        },
-        {
-          "question": {
-            "Image": {
-              "link": "https://static.wikia.nocookie.net/lethalcompanyzeekerss/images/e/e6/Site-logo.png",
-              "text": "Can you read?",
-              "blurred": true
-            }
-          },
-          "answer": "No, you can't... but larry can",
-          "multiplier": 1.533061
+          "multiplier": 1.0
         },
         {
           "question": {
@@ -584,58 +250,7 @@
             }
           },
           "answer": "Who is larry?",
-          "multiplier": 1.9909616
-        },
-        {
-          "question": {
-            "Image": {
-              "link": "https://static.wikia.nocookie.net/lethalcompanyzeekerss/images/e/e6/Site-logo.png",
-              "text": "Can you read?",
-              "blurred": true
-            }
-          },
-          "answer": "No, you can't... but larry can",
-          "multiplier": 2.0368686
-        },
-        {
-          "question": {
-            "Video": {
-              "link": "https://www.youtube.com/embed/IsKyw-_aRdI?si=3O_GMKShwnjoYKxv",
-              "text": "WHompst killed this manz?",
-              "blurred": true
-            }
-          },
-          "answer": "Who is larry?",
-          "multiplier": 3.6275353
-        },
-        {
-          "question": {
-            "Text": {
-              "text": "Evil?"
-            }
-          },
-          "answer": "Who is larry?",
-          "multiplier": 4.608696
-        },
-        {
-          "question": {
-            "Image": {
-              "link": "https://static.wikia.nocookie.net/lethalcompanyzeekerss/images/e/e6/Site-logo.png",
-              "text": "Can you read?",
-              "blurred": true
-            }
-          },
-          "answer": "No, you can't... but larry can",
-          "multiplier": 4.2096014
-        },
-        {
-          "question": {
-            "Text": {
-              "text": "Evil?"
-            }
-          },
-          "answer": "Who is larry?",
-          "multiplier": 1.8118248
+          "multiplier": 1.0
         },
         {
           "question": {
@@ -645,131 +260,7 @@
             }
           },
           "answer": "Who is larry?",
-          "multiplier": 2.3841386
-        }
-      ]
-    },
-    {
-      "title": "Randomly Generated",
-      "questions": [
-        {
-          "question": {
-            "Video": {
-              "link": "https://www.youtube.com/embed/IsKyw-_aRdI?si=3O_GMKShwnjoYKxv",
-              "text": "WHompst killed this manz?",
-              "blurred": true
-            }
-          },
-          "answer": "Who is larry?",
-          "multiplier": 4.755164
-        },
-        {
-          "question": {
-            "Video": {
-              "link": "https://www.youtube.com/embed/IsKyw-_aRdI?si=3O_GMKShwnjoYKxv",
-              "text": "WHompst killed this manz?",
-              "blurred": true
-            }
-          },
-          "answer": "Who is larry?",
-          "multiplier": 4.5112996
-        },
-        {
-          "question": {
-            "Text": {
-              "text": "Evil?"
-            }
-          },
-          "answer": "Who is larry?",
-          "multiplier": 1.8142304
-        },
-        {
-          "question": {
-            "Video": {
-              "link": "https://www.youtube.com/embed/IsKyw-_aRdI?si=3O_GMKShwnjoYKxv",
-              "text": "WHompst killed this manz?",
-              "blurred": true
-            }
-          },
-          "answer": "Who is larry?",
-          "multiplier": 1.5427794
-        },
-        {
-          "question": {
-            "Audio": {
-              "link": "https://static.wikia.nocookie.net/lethalcompanyzeekerss/images/3/3a/Babycry1.mp3",
-              "text": "Whomst maketh this soundy?"
-            }
-          },
-          "answer": "Who is larry?",
-          "multiplier": 1.6459413
-        },
-        {
-          "question": {
-            "Text": {
-              "text": "Evil?"
-            }
-          },
-          "answer": "Who is larry?",
-          "multiplier": 3.7393198
-        },
-        {
-          "question": {
-            "Video": {
-              "link": "https://www.youtube.com/embed/IsKyw-_aRdI?si=3O_GMKShwnjoYKxv",
-              "text": "WHompst killed this manz?",
-              "blurred": true
-            }
-          },
-          "answer": "Who is larry?",
-          "multiplier": 3.1156864
-        },
-        {
-          "question": {
-            "Video": {
-              "link": "https://www.youtube.com/embed/IsKyw-_aRdI?si=3O_GMKShwnjoYKxv",
-              "text": "WHompst killed this manz?",
-              "blurred": true
-            }
-          },
-          "answer": "Who is larry?",
-          "multiplier": 1.0232368
-        },
-        {
-          "question": {
-            "Text": {
-              "text": "Evil?"
-            }
-          },
-          "answer": "Who is larry?",
-          "multiplier": 4.249037
-        },
-        {
-          "question": {
-            "Video": {
-              "link": "https://www.youtube.com/embed/IsKyw-_aRdI?si=3O_GMKShwnjoYKxv",
-              "text": "WHompst killed this manz?",
-              "blurred": true
-            }
-          },
-          "answer": "Who is larry?",
-          "multiplier": 4.592558
-        }
-      ]
-    },
-    {
-      "title": "Randomly Generated",
-      "questions": [
-        {
-          "question": {
-            "Image": {
-              "link": "https://static.wikia.nocookie.net/lethalcompanyzeekerss/images/e/e6/Site-logo.png",
-              "text": "Can you read?",
-              "blurred": true
-            }
-          },
-          "answer": "No, you can't... but larry can",
-          "multiplier": 3.4136858
+          "multiplier": 1.0
         },
         {
           "question": {
@@ -780,59 +271,7 @@
             }
           },
           "answer": "No, you can't... but larry can",
-          "multiplier": 2.672665
-        },
-        {
-          "question": {
-            "Audio": {
-              "link": "https://static.wikia.nocookie.net/lethalcompanyzeekerss/images/3/3a/Babycry1.mp3",
-              "text": "Whomst maketh this soundy?"
-            }
-          },
-          "answer": "Who is larry?",
-          "multiplier": 3.251093
-        },
-        {
-          "question": {
-            "Video": {
-              "link": "https://www.youtube.com/embed/IsKyw-_aRdI?si=3O_GMKShwnjoYKxv",
-              "text": "WHompst killed this manz?",
-              "blurred": true
-            }
-          },
-          "answer": "Who is larry?",
-          "multiplier": 3.5139322
-        },
-        {
-          "question": {
-            "Audio": {
-              "link": "https://static.wikia.nocookie.net/lethalcompanyzeekerss/images/3/3a/Babycry1.mp3",
-              "text": "Whomst maketh this soundy?"
-            }
-          },
-          "answer": "Who is larry?",
-          "multiplier": 2.6619945
-        },
-        {
-          "question": {
-            "Audio": {
-              "link": "https://static.wikia.nocookie.net/lethalcompanyzeekerss/images/3/3a/Babycry1.mp3",
-              "text": "Whomst maketh this soundy?"
-            }
-          },
-          "answer": "Who is larry?",
-          "multiplier": 4.885405
-        },
-        {
-          "question": {
-            "Image": {
-              "link": "https://static.wikia.nocookie.net/lethalcompanyzeekerss/images/e/e6/Site-logo.png",
-              "text": "Can you read?",
-              "blurred": true
-            }
-          },
-          "answer": "No, you can't... but larry can",
-          "multiplier": 3.9582534
+          "multiplier": 1.0
         },
         {
           "question": {
@@ -841,241 +280,7 @@
             }
           },
           "answer": "Who is larry?",
-          "multiplier": 3.0382004
-        },
-        {
-          "question": {
-            "Video": {
-              "link": "https://www.youtube.com/embed/IsKyw-_aRdI?si=3O_GMKShwnjoYKxv",
-              "text": "WHompst killed this manz?",
-              "blurred": true
-            }
-          },
-          "answer": "Who is larry?",
-          "multiplier": 1.2875504
-        },
-        {
-          "question": {
-            "Video": {
-              "link": "https://www.youtube.com/embed/IsKyw-_aRdI?si=3O_GMKShwnjoYKxv",
-              "text": "WHompst killed this manz?",
-              "blurred": true
-            }
-          },
-          "answer": "Who is larry?",
-          "multiplier": 3.681015
-        }
-      ]
-    },
-    {
-      "title": "Randomly Generated",
-      "questions": [
-        {
-          "question": {
-            "Image": {
-              "link": "https://static.wikia.nocookie.net/lethalcompanyzeekerss/images/e/e6/Site-logo.png",
-              "text": "Can you read?",
-              "blurred": true
-            }
-          },
-          "answer": "No, you can't... but larry can",
-          "multiplier": 3.3923078
-        },
-        {
-          "question": {
-            "Text": {
-              "text": "Evil?"
-            }
-          },
-          "answer": "Who is larry?",
-          "multiplier": 2.1680799
-        },
-        {
-          "question": {
-            "Image": {
-              "link": "https://static.wikia.nocookie.net/lethalcompanyzeekerss/images/e/e6/Site-logo.png",
-              "text": "Can you read?",
-              "blurred": true
-            }
-          },
-          "answer": "No, you can't... but larry can",
-          "multiplier": 2.9451923
-        },
-        {
-          "question": {
-            "Audio": {
-              "link": "https://static.wikia.nocookie.net/lethalcompanyzeekerss/images/3/3a/Babycry1.mp3",
-              "text": "Whomst maketh this soundy?"
-            }
-          },
-          "answer": "Who is larry?",
-          "multiplier": 1.457984
-        },
-        {
-          "question": {
-            "Text": {
-              "text": "Evil?"
-            }
-          },
-          "answer": "Who is larry?",
-          "multiplier": 1.9422808
-        },
-        {
-          "question": {
-            "Text": {
-              "text": "Evil?"
-            }
-          },
-          "answer": "Who is larry?",
-          "multiplier": 2.1091356
-        },
-        {
-          "question": {
-            "Text": {
-              "text": "Evil?"
-            }
-          },
-          "answer": "Who is larry?",
-          "multiplier": 3.1935844
-        },
-        {
-          "question": {
-            "Image": {
-              "link": "https://static.wikia.nocookie.net/lethalcompanyzeekerss/images/e/e6/Site-logo.png",
-              "text": "Can you read?",
-              "blurred": true
-            }
-          },
-          "answer": "No, you can't... but larry can",
-          "multiplier": 2.4108791
-        },
-        {
-          "question": {
-            "Image": {
-              "link": "https://static.wikia.nocookie.net/lethalcompanyzeekerss/images/e/e6/Site-logo.png",
-              "text": "Can you read?",
-              "blurred": true
-            }
-          },
-          "answer": "No, you can't... but larry can",
-          "multiplier": 3.8176928
-        },
-        {
-          "question": {
-            "Audio": {
-              "link": "https://static.wikia.nocookie.net/lethalcompanyzeekerss/images/3/3a/Babycry1.mp3",
-              "text": "Whomst maketh this soundy?"
-            }
-          },
-          "answer": "Who is larry?",
-          "multiplier": 4.9572124
-        }
-      ]
-    },
-    {
-      "title": "Randomly Generated",
-      "questions": [
-        {
-          "question": {
-            "Video": {
-              "link": "https://www.youtube.com/embed/IsKyw-_aRdI?si=3O_GMKShwnjoYKxv",
-              "text": "WHompst killed this manz?",
-              "blurred": true
-            }
-          },
-          "answer": "Who is larry?",
-          "multiplier": 2.2131062
-        },
-        {
-          "question": {
-            "Image": {
-              "link": "https://static.wikia.nocookie.net/lethalcompanyzeekerss/images/e/e6/Site-logo.png",
-              "text": "Can you read?",
-              "blurred": true
-            }
-          },
-          "answer": "No, you can't... but larry can",
-          "multiplier": 2.5341902
-        },
-        {
-          "question": {
-            "Image": {
-              "link": "https://static.wikia.nocookie.net/lethalcompanyzeekerss/images/e/e6/Site-logo.png",
-              "text": "Can you read?",
-              "blurred": true
-            }
-          },
-          "answer": "No, you can't... but larry can",
-          "multiplier": 4.56407
-        },
-        {
-          "question": {
-            "Text": {
-              "text": "Evil?"
-            }
-          },
-          "answer": "Who is larry?",
-          "multiplier": 4.6090164
-        },
-        {
-          "question": {
-            "Text": {
-              "text": "Evil?"
-            }
-          },
-          "answer": "Who is larry?",
-          "multiplier": 2.126453
-        },
-        {
-          "question": {
-            "Text": {
-              "text": "Evil?"
-            }
-          },
-          "answer": "Who is larry?",
-          "multiplier": 4.4503303
-        },
-        {
-          "question": {
-            "Video": {
-              "link": "https://www.youtube.com/embed/IsKyw-_aRdI?si=3O_GMKShwnjoYKxv",
-              "text": "WHompst killed this manz?",
-              "blurred": true
-            }
-          },
-          "answer": "Who is larry?",
-          "multiplier": 4.1238623
-        },
-        {
-          "question": {
-            "Video": {
-              "link": "https://www.youtube.com/embed/IsKyw-_aRdI?si=3O_GMKShwnjoYKxv",
-              "text": "WHompst killed this manz?",
-              "blurred": true
-            }
-          },
-          "answer": "Who is larry?",
-          "multiplier": 3.2721744
-        },
-        {
-          "question": {
-            "Video": {
-              "link": "https://www.youtube.com/embed/IsKyw-_aRdI?si=3O_GMKShwnjoYKxv",
-              "text": "WHompst killed this manz?",
-              "blurred": true
-            }
-          },
-          "answer": "Who is larry?",
-          "multiplier": 1.2765551
-        },
-        {
-          "question": {
-            "Text": {
-              "text": "Evil?"
-            }
-          },
-          "answer": "Who is larry?",
-          "multiplier": 4.1770377
+          "multiplier": 1.0
         }
       ]
     }
