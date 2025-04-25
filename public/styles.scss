@@ -110,7 +110,10 @@ footer {
   display: flex;
   flex-flow: column;
   align-items: center;
-  flex: auto;
+  justify-content: center;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .question {
@@ -119,7 +122,7 @@ footer {
   align-items: center;
   justify-content: center;
   height: 75%;
-  width: 50%;
+  width: 100%;
   padding: 5px;
 }
 
@@ -128,32 +131,45 @@ footer {
   flex-flow: column;
   align-items: center;
   height: 25%;
-  width: 50%;
+  width: 100%;
   padding: 5px;
+  font-size: 1.5rem;
 }
 
-#question-text {
+#text-question {
+  display: flex;
+  flex-flow: column;
+  flex: auto;
   font-size: 3rem;
+}
+
+#audio-question {
+  display: flex;
+  flex-flow: column;
   flex: auto;
+  font-size: 2rem;
 }
 
-#question-audio {
+#video-question {
+  display: flex;
+  flex-flow: column;
   flex: auto;
-}
-
-#question-video {
-  width: auto;
-  height: auto;
-}
-
-#question-audio-text {
   font-size: 1rem;
 }
 
-#question-image {
-  width: auto;
-  height: auto;
+#image-question {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-flow: column;
+  font-size: 1rem;
+}
+
+img {
+  width: 100%;
+  height: 100%;
   max-height: 100%;
+  object-fit: contain;
 }
 
 .blurred {

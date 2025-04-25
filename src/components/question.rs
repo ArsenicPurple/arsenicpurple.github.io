@@ -28,29 +28,36 @@ pub fn Question(question: Question, index: usize) -> impl IntoView {
             </div>
             <div class="question">
                 { move || match question.question.clone() {
-                    QuestionType::Text(text) => view! {
-                        <h2 id="question-text">{text.text}</h2>
+                    QuestionType::Text(options) => view! {
+                        <div id="text-question">
+                            <h2>{options.text}</h2>
+                        </div>
                     }.into_any(),
                     QuestionType::Audio(options) => view! {
-                        <audio controls id="question-audio" src={options.link}></audio>
-                        <h2 id="question-audio-text">{options.text}</h2>
+                        <div id="audio-question">
+                            <audio controls src={options.link}></audio>
+                            <h2>{options.text}</h2>
+                        </div>
                     }.into_any(),
                     QuestionType::Video(options) => view! {
-                        <iframe id="question-video" class=move || match options.blurred { true => "blurred", false => "" } src={options.link.clone()} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        <h2 id="question-video-text">{options.text.clone()}</h2>
+                        <div id="video-question">
+                            <iframe class=move || match options.blurred { true => "blurred", false => "" } src={options.link.clone()} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <h2>{options.text.clone()}</h2>
+                        </div>
                     }.into_any(),
                     QuestionType::Image(options) => view! {
-                        <img id="question-image" src={options.link} alt="Fard"/>
-                        <h2 id="question-image-text">{options.text}</h2>
+                        <div id="image-question">
+                            <img class=move || match options.blurred { true => "blurred", false => "" } src={options.link} alt="Fard"/>
+                            <h2>{options.text}</h2>
+                        </div>
                     }.into_any(),
                 }}
             </div>
             <div class="answer">
                 { move || match answered.get() {
                     true => view! { <h2>{question.answer.clone()}</h2> }.into_any(),
-                    false => view! { }.into_any(),
+                    false => view! { <button class="button-s" on:click=move |_| set_answered.update(|a| *a = !*a)>"Reveal Answer"</button> }.into_any(),
                 }}
-                <button class="button-s" on:click=move |_| set_answered.update(|a| *a = !*a)>"Reveal Answer"</button>
             </div>
         </div>
     }
