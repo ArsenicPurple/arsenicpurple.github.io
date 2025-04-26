@@ -1,6 +1,5 @@
 pub mod scoreboard;
 pub mod controls;
-pub mod popup;
 pub mod game;
 mod question;
 mod column;
